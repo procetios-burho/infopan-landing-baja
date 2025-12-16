@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <title>Baja Exitosa - Infopan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            background: #f5f5f5
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
+        }
+
+        h1 {
+            color: #DB2777;
+            margin-bottom: 20px
+        }
+
+        p {
+            color: #6B7280;
+            line-height: 1.6
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #DB2777, #9333EA);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px
+        }
+        .logo-infopan {
+        margin-top: 30px;
+    
+        }
+
+        .logo-infopan img {
+        width: 120px;   /* ajustable */
+        height: 120px;
+        opacity: 0.9;
+        border-radius: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>✅ Baja realizada con éxito</h1>
+    <p>Tu email <strong>{{$json.Email}}</strong> ha sido dado de baja de nuestra lista de correos.</p>
+    <p>Ya no recibirás más comunicaciones de <strong>Infopan - Publicidad Responsable</strong>.</p>
+    <p>Si cambiás de opinión, podés contactarnos en cualquier momento.</p>
+
+    <a href="https://n9.cl/infopan-fsa" class="btn">Contactar</a>
+
+    <!-- Logo Infopan -->
+    <div class="logo-infopan">
+        <img src="https://storage.googleapis.com/mkt-infopan/perfil%20FB_Formosa.jpg" alt="Infopan - Publicidad Responsable">
+    </div>
+</div>
+
+</body>
+</html>
