@@ -67,6 +67,17 @@
         <img src="https://storage.googleapis.com/mkt-infopan/perfil%20FB_Formosa.jpg" alt="Infopan - Publicidad Responsable">
     </div>
 </div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const email = params.get("email");
+  const empresa = params.get("empresa");
+
+  if (email) {
+    fetch(
+      `https://n8n-procetios.burho.pro/webhook/unsuscribe?email=${encodeURIComponent(email)}&empresa=${encodeURIComponent(empresa)}`
+    );
+  }
+</script>
 
 </body>
 </html>
