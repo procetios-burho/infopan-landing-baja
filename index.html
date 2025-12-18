@@ -53,31 +53,34 @@
     </style>
 </head>
 
-<body>
+    <body>
 <div class="container">
     <h1>✅ Baja realizada con éxito</h1>
-    <p>Tu email <strong>{{$json.email}}</strong> ha sido dado de baja de nuestra lista de correos.</p>
+    <p>Tu email <strong id="email-display"></strong> ha sido dado de baja de nuestra lista de correos.</p>
     <p>Ya no recibirás más comunicaciones de <strong>Infopan - Publicidad Responsable</strong>.</p>
     <p>Si cambiás de opinión, podés contactarnos en cualquier momento.</p>
-
     <a href="https://n9.cl/infopan-fsa" class="btn">Contactar</a>
-
-    <!-- Logo Infopan -->
     <div class="logo-infopan">
         <img src="https://storage.googleapis.com/mkt-infopan/perfil%20FB_Formosa.jpg" alt="Infopan - Publicidad Responsable">
     </div>
 </div>
+
 <script>
   const params = new URLSearchParams(window.location.search);
   const email = params.get("email");
   const empresa = params.get("empresa");
-
+  
+  // Mostrar el email en la página
   if (email) {
+    document.getElementById('email-display').textContent = email;
+    
+    // Enviar al webhook
     fetch(
       `https://n8n-procetios.burho.pro/webhook/unsuscribe?email=${encodeURIComponent(email)}&empresa=${encodeURIComponent(empresa)}`
     );
+  } else {
+    document.getElementById('email-display').textContent = '[email no disponible]';
   }
 </script>
-
 </body>
 </html>
